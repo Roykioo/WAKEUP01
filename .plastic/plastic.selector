@@ -1,0 +1,4 @@
+repository "WAKEUP-master@roykioo@cloud.cn"
+  path "/"
+    br "/main"
+    co "/main"
