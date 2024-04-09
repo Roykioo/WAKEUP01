@@ -7,11 +7,20 @@ public class Exit : MonoBehaviour
 {
     public int Scenenum;
     public string ScenePWD;
-    private void OnTriggerStay2D(Collider2D collision)
+    public bool inspace;
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (Input.GetKey(KeyCode.F))
+        inspace = true;
+    }
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        inspace = false;
+    }
+    public void Update()
+    {
+        if (Input.GetKey(KeyCode.F)&&inspace)
         {
-            PlayerManager.instance.scenePWD= ScenePWD;
+            PlayerManager.instance.scenePWD = ScenePWD;
             SceneManager.LoadScene(Scenenum);
         }
     }

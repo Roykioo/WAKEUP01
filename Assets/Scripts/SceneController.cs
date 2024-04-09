@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class SceneController : MonoBehaviour
 {
-   public static SceneController instance;  
+   public static SceneController instance;
+    public bool checkdoor;
+    public bool firsttalk=true;
     public void Awake()
     {
         if(instance == null)

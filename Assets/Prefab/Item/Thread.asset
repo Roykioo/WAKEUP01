@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Thread
   m_EditorClassIdentifier: 
   itemName: Thread
-  itemImage: {fileID: -9095717837082945937, guid: bd3cb4af8406d4436a2ae8c2aafe1f8d, type: 3}
+  itemImage: {fileID: 21300000, guid: e68c4c8921310e94082fcb3a013eb583, type: 3}
   itemInfo: "\u4E00\u6761\u7EBF"
   used: 0
   owned: 0
