@@ -4,8 +4,7 @@ using UnityEngine;
 
 public class ClickToTalk : MonoBehaviour
 {
-    [TextArea(1,3)]
-    public string[] lines;
+    public int ID;
     void Update()
     {
         if(Input.GetMouseButtonDown(0))
@@ -13,7 +12,7 @@ public class ClickToTalk : MonoBehaviour
             RaycastHit2D hit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector2.zero, 1000);
             if (hit.collider != null && hit.collider.tag == "talk"&&DialogeManager.instance.DialogeBox.activeInHierarchy==false)
             {
-                DialogeManager.instance.ShowDialogue(lines);
+                DialogeManager.instance.ShowDialogue(ID);
             }
         }
     }
