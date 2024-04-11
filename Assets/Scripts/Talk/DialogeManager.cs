@@ -36,6 +36,10 @@ public class DialogeManager : MonoBehaviour
         characterDic["毕初"] = sprites[3];
         characterDic["醉汉"] = sprites[4];
         characterDic["同学"] = sprites[5];
+        characterDic["于明湘"] = sprites[6];
+        characterDic["工友1"] = sprites[7];
+        characterDic["工友2"] = sprites[8];
+        characterDic["工友"] = sprites[9];
         ReadText(DialogeAsset);
         if (instance == null)
         {
@@ -61,7 +65,7 @@ public class DialogeManager : MonoBehaviour
                     currentLine++;
                     if (currentLine < TextLines.Count) 
                     {
-                        UpdataImage(NameLines[currentLine]);
+                        //UpdataImage(NameLines[currentLine]);
                         StartCoroutine(ScrollingText()); 
                     }
                     else 
@@ -86,8 +90,9 @@ public class DialogeManager : MonoBehaviour
         else if (Sign == "&")
         {
             CharacterDialoge(ID);
+            
         }
-        UpdataImage(NameLines[0]);
+        //UpdataImage(NameLines[0]);
         StartCoroutine(ScrollingText());
         DialogeBox.gameObject.SetActive(true);
     }
@@ -95,7 +100,10 @@ public class DialogeManager : MonoBehaviour
     {
         isScrolling = true;
         DialogeText.text = "";
-        NameText.text = NameLines[currentLine];
+        if (NameLines.Count!=0)
+        {
+            NameText.text = NameLines[currentLine];
+        }
         foreach (char letter in TextLines[currentLine].ToCharArray())
         {
             DialogeText.text += letter;
