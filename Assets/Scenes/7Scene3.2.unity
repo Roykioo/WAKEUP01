@@ -181,7 +181,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: fbb9213b8b2678349b13862df0aaf7e0, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 308933ea3219bea43b06873067c0c3ee, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -339,6 +339,7 @@ MonoBehaviour:
   PresentPosition: {x: 0, y: 0}
   maxPos: 11.4
   minPos: -11.4
+  Ani: {fileID: 0}
 --- !u!1 &9166800335536791194
 GameObject:
   m_ObjectHideFlags: 0

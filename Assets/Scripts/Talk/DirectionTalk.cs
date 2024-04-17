@@ -8,7 +8,7 @@ public class DirectionTalk : MonoBehaviour
     public int[] ID;
     public int index = 0;
     public GameObject player;
-    public void Start()
+    public void Update()
     {
         if(SceneController.instance.firsttalk)
         {

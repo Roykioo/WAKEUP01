@@ -785,6 +785,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2016190422}
   - component: {fileID: 2016190421}
+  - component: {fileID: 2016190423}
   m_Layer: 0
   m_Name: character
   m_TagString: Untagged
@@ -859,6 +860,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2016190423
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2016190420}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee83fbb2786f0bd459581f5051c6d4b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2072165672
 GameObject:
   m_ObjectHideFlags: 0
@@ -1579,22 +1592,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &4296627688850287672
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4296627688850287678}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2f185d1081e3cc0429973102f95fb2ca, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  myBag: {fileID: 0}
-  slotGrid: {fileID: 0}
-  slotPrefab: {fileID: 0}
-  itemInformation: {fileID: 0}
 --- !u!224 &4296627688850287674
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1632,7 +1629,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9fd4c2ee5f3cffb4698638eafb394f06, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  image: {fileID: 0}
+  image: {fileID: 4296627689378855521}
   alpha: 0
   speed: 0.7
 --- !u!114 &4296627688850287676
@@ -1692,7 +1689,6 @@ GameObject:
   - component: {fileID: 4296627688850287676}
   - component: {fileID: 4296627688850287679}
   - component: {fileID: 4296627688850287675}
-  - component: {fileID: 4296627688850287672}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged

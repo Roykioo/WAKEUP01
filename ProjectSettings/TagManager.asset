@@ -10,6 +10,7 @@ TagManager:
   - talk
   - item
   - slot
+  - bed
   layers:
   - Default
   - TransparentFX

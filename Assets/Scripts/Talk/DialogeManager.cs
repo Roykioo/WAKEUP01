@@ -6,6 +6,7 @@ using TMPro;
 using Unity.VisualScripting;
 using System;
 using System.Reflection;
+using System.Xml;
 
 public class DialogeManager : MonoBehaviour
 {
@@ -56,7 +57,7 @@ public class DialogeManager : MonoBehaviour
     }
     void Update()
     {
-        if(DialogeBox.activeInHierarchy)
+        if (DialogeBox.activeInHierarchy)
         {
             if (Input.GetKeyDown(KeyCode.Space))
             {
@@ -65,14 +66,15 @@ public class DialogeManager : MonoBehaviour
                     currentLine++;
                     if (currentLine < TextLines.Count) 
                     {
-                        //UpdataImage(NameLines[currentLine]);
-                        StartCoroutine(ScrollingText()); 
+                        UpdataImage(NameLines[currentLine]); 
+                        StartCoroutine(ScrollingText());
                     }
                     else 
                     { 
                         DialogeBox.gameObject.SetActive(false); 
                         TextLines.Clear(); 
-                        NameLines.Clear(); 
+                        NameLines.Clear();
+                        Character.sprite = null;
                         currentLine = 0; 
                     }
                 }
@@ -92,7 +94,7 @@ public class DialogeManager : MonoBehaviour
             CharacterDialoge(ID);
             
         }
-        //UpdataImage(NameLines[0]);
+        if(NameLines.Count!=0) { UpdataImage(NameLines[0]); }
         StartCoroutine(ScrollingText());
         DialogeBox.gameObject.SetActive(true);
     }
@@ -100,6 +102,7 @@ public class DialogeManager : MonoBehaviour
     {
         isScrolling = true;
         DialogeText.text = "";
+        NameText.text = "";
         if (NameLines.Count!=0)
         {
             NameText.text = NameLines[currentLine];
@@ -121,8 +124,8 @@ public class DialogeManager : MonoBehaviour
     }
     public void itemDialoge(int ID)
     {
-        int index = ID;
-        while(dialogeLines[index][4]!="-1")
+        int index = ID;  
+        while (dialogeLines[index][4]!="-1")
         {
             TextLines.Add(dialogeLines[index][3]);
             index = int.Parse(dialogeLines[index][4]);
@@ -142,6 +145,13 @@ public class DialogeManager : MonoBehaviour
     }
     public void UpdataImage(string name)
     {
-        Character.sprite = characterDic[name];
+        if(characterDic.ContainsKey(name))
+        {
+            Character.sprite = characterDic[name];
+        }
+        else
+        {
+            Character.sprite = null;
+        }
     }
 }
