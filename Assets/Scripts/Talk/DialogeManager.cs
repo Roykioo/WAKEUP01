@@ -66,7 +66,7 @@ public class DialogeManager : MonoBehaviour
                     currentLine++;
                     if (currentLine < TextLines.Count) 
                     {
-                        UpdataImage(NameLines[currentLine]); 
+                        if(NameLines.Count!=0) {UpdataImage(NameLines[currentLine]); }
                         StartCoroutine(ScrollingText());
                     }
                     else 

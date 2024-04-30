@@ -181,7 +181,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: d576f3cbf6ed6c74aa00ad019a3d9e6b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 88ba8ccfadd915f41be918dd4dd1b5cc, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -316,8 +316,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5243859996508326794}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.69, y: -2.78, z: -1}
-  m_LocalScale: {x: 1, y: 2, z: 1}
+  m_LocalPosition: {x: 1.69, y: -2.91, z: -1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -339,6 +339,7 @@ MonoBehaviour:
   PresentPosition: {x: 0, y: 0}
   maxPos: 18.3
   minPos: -18.3
+  Ani: {fileID: 0}
 --- !u!1 &5243859996508326794
 GameObject:
   m_ObjectHideFlags: 0
@@ -350,6 +351,7 @@ GameObject:
   - component: {fileID: 5243859996508326792}
   - component: {fileID: 5243859996508326795}
   - component: {fileID: 5243859996508326793}
+  - component: {fileID: 5243859996508326796}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -398,8 +400,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 0.20790316, g: 0.267903, b: 0.6037736, a: 1}
+  m_Sprite: {fileID: 1557920202, guid: 8662d48a29c426e4f8cc0ce12bc5dcba, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -409,3 +411,24 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &5243859996508326796
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5243859996508326794}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 62238327c238a2540a7898aea31fee53, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
