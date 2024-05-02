@@ -5,10 +5,15 @@ using UnityEngine;
 public class Add_button : MonoBehaviour
 {
     public GameObject obj;
+    public bool once = true;
     public Item item;
     void Start()
     {
-        obj.GetComponent<Inventory>().itemList.Add(item);
+        if(once)
+        {
+            obj.GetComponent<Inventory>().itemList.Add(item);
+            once = false;
+        }
     }
 
 }

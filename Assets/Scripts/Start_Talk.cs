@@ -8,6 +8,7 @@ public class Start_Talk : MonoBehaviour
     void Start()
     {
         DialogeManager.instance.ShowDialogue(ID);
+
     }
 
 }
