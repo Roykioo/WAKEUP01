@@ -7,7 +7,6 @@ using UnityEngine.SceneManagement;
 public class Show_Enlarged : MonoBehaviour
 {
     public GameObject enlarged;
-    public float duration;
     public bool inspace;
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -21,7 +20,7 @@ public class Show_Enlarged : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.F) && inspace)
         {
-           
+            enlarged.gameObject.SetActive(true);
         }
     }
 

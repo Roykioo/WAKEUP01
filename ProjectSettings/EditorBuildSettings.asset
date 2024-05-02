@@ -24,42 +24,42 @@ EditorBuildSettings:
     path: Assets/Scenes/6Scene3.2.unity
     guid: 8f6ebd80f0ce2f2479d1fd631a016a4a
   - enabled: 1
-    path: Assets/Scenes/8Scene4.1.unity
+    path: Assets/Scenes/7Scene4.1.unity
     guid: e9e7ac95408d81a47a4fa3eb183c7035
   - enabled: 1
-    path: Assets/Scenes/10Scene4.3.unity
+    path: Assets/Scenes/8Scene4.3.unity
     guid: 0b382339960ca8040b58731e4ac473e7
   - enabled: 1
-    path: Assets/Scenes/12Scene5.1.unity
+    path: Assets/Scenes/9Scene5.1.unity
     guid: 76b56be070b42484aaa63a82983ddd78
   - enabled: 1
-    path: Assets/Scenes/13Scene5.2.unity
+    path: Assets/Scenes/10Scene5.2.unity
     guid: b5d3a7a6e15fc1c47be891c8ba73ba11
   - enabled: 1
-    path: Assets/Scenes/14Scene6.1.unity
+    path: Assets/Scenes/11Scene6.1.unity
     guid: b8c0acaf2c3e7d748ac56106e4046ba2
   - enabled: 1
-    path: Assets/Scenes/15Scene6.2.unity
+    path: Assets/Scenes/12Scene6.2.unity
     guid: 2ec07f603512e8544b6ddf554dbc1529
   - enabled: 1
-    path: Assets/Scenes/16Scene7.1.unity
+    path: Assets/Scenes/13Scene7.1.unity
     guid: 338559f46c50fe4488d7ad93bd760418
   - enabled: 1
-    path: Assets/Scenes/17Scene7.2.unity
+    path: Assets/Scenes/14Scene7.2.unity
     guid: 6da1865edc0362e4fb6b6765e34b0a66
   - enabled: 1
-    path: Assets/Scenes/18Scene7.3.unity
+    path: Assets/Scenes/15Scene7.3.unity
     guid: c379d109a9e4daf4380296507d448b9e
   - enabled: 1
-    path: Assets/Scenes/19Scene7.4.unity
+    path: Assets/Scenes/16Scene7.4.unity
     guid: ead406df694b0ef4ea0d22be649c3180
   - enabled: 1
-    path: Assets/Scenes/21Scene7.6.unity
+    path: Assets/Scenes/17Scene7.6.unity
     guid: a71a1847c3b8ea547ad83059a56d1dda
   - enabled: 1
-    path: Assets/Scenes/22Scene7.7.unity
+    path: Assets/Scenes/18Scene7.7.unity
     guid: 55580274253cb254883965a04b686bd2
   - enabled: 1
-    path: Assets/Scenes/23Scene7.8.unity
+    path: Assets/Scenes/19Scene7.8.unity
     guid: fa23a8f1a52a6f24d9d69872ffa155cb
   m_configObjects: {}
