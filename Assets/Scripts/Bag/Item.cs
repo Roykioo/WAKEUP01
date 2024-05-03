@@ -5,10 +5,21 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "New Item", menuName = "Inventory/New Item")]
 public class Item : ScriptableObject
 {
-    public string itemName;//Ãû×Ö
-    public Sprite itemImage;//Í¼Ïñ
+    //ç‰©å“çš„idï¼ŒåŠ¡å¿…è·Ÿåœ¨GlobalMapä¸­çš„å¼•ç”¨å¯¹åº”ï¼Œæ¯”å¦‚ç¬¬0ä¸ªç‰©å“çš„idå°±å¡«0
+    public int id;
+    public string itemName;//ï¿½ï¿½ï¿½ï¿½
+    public Sprite itemImage;//Í¼ï¿½ï¿½
     [TextArea(1,3)]
-    public string itemInfo;//ÎïÆ·ÃèÊö
-    public bool used;//ÊÇ·ñ±»Ê¹ÓÃ
-    public bool owned;//ÊÇ·ñÓµÓĞ
+    public string itemInfo;//ï¿½ï¿½Æ·ï¿½ï¿½ï¿½ï¿½
+    public bool used;//ï¿½Ç·ï¿½Ê¹ï¿½ï¿½
+    public bool owned;//ï¿½Ç·ï¿½Óµï¿½ï¿½
+    public  Item Clone(){
+        Item newItem = ScriptableObject.CreateInstance<Item>();
+        newItem.id = id;
+        newItem.itemName = itemName;
+        newItem.itemImage = itemImage;
+        newItem.used = used;
+        newItem.owned = owned;
+        return newItem;
+    }
 }  

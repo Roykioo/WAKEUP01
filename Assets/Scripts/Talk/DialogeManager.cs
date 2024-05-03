@@ -6,6 +6,7 @@ using TMPro;
 using Unity.VisualScripting;
 using System;
 using System.Reflection;
+using System.Xml;
 
 public class DialogeManager : MonoBehaviour
 {
@@ -36,6 +37,10 @@ public class DialogeManager : MonoBehaviour
         characterDic["毕初"] = sprites[3];
         characterDic["醉汉"] = sprites[4];
         characterDic["同学"] = sprites[5];
+        characterDic["于明湘"] = sprites[6];
+        characterDic["工友1"] = sprites[7];
+        characterDic["工友2"] = sprites[8];
+        characterDic["工友"] = sprites[9];
         ReadText(DialogeAsset);
         if (instance == null)
         {
@@ -52,7 +57,7 @@ public class DialogeManager : MonoBehaviour
     }
     void Update()
     {
-        if(DialogeBox.activeInHierarchy)
+        if (DialogeBox.activeInHierarchy)
         {
             if (Input.GetKeyDown(KeyCode.Space))
             {
@@ -61,14 +66,15 @@ public class DialogeManager : MonoBehaviour
                     currentLine++;
                     if (currentLine < TextLines.Count) 
                     {
-                        UpdataImage(NameLines[currentLine]);
-                        StartCoroutine(ScrollingText()); 
+                        if(NameLines.Count!=0) {UpdataImage(NameLines[currentLine]); }
+                        StartCoroutine(ScrollingText());
                     }
                     else 
                     { 
                         DialogeBox.gameObject.SetActive(false); 
                         TextLines.Clear(); 
-                        NameLines.Clear(); 
+                        NameLines.Clear();
+                        Character.sprite = null;
                         currentLine = 0; 
                     }
                 }
@@ -86,8 +92,9 @@ public class DialogeManager : MonoBehaviour
         else if (Sign == "&")
         {
             CharacterDialoge(ID);
+            
         }
-        UpdataImage(NameLines[0]);
+        if(NameLines.Count!=0) { UpdataImage(NameLines[0]); }
         StartCoroutine(ScrollingText());
         DialogeBox.gameObject.SetActive(true);
     }
@@ -95,7 +102,11 @@ public class DialogeManager : MonoBehaviour
     {
         isScrolling = true;
         DialogeText.text = "";
-        NameText.text = NameLines[currentLine];
+        NameText.text = "";
+        if (NameLines.Count!=0)
+        {
+            NameText.text = NameLines[currentLine];
+        }
         foreach (char letter in TextLines[currentLine].ToCharArray())
         {
             DialogeText.text += letter;
@@ -113,8 +124,8 @@ public class DialogeManager : MonoBehaviour
     }
     public void itemDialoge(int ID)
     {
-        int index = ID;
-        while(dialogeLines[index][4]!="-1")
+        int index = ID;  
+        while (dialogeLines[index][4]!="-1")
         {
             TextLines.Add(dialogeLines[index][3]);
             index = int.Parse(dialogeLines[index][4]);
@@ -134,6 +145,13 @@ public class DialogeManager : MonoBehaviour
     }
     public void UpdataImage(string name)
     {
-        Character.sprite = characterDic[name];
+        if(characterDic.ContainsKey(name))
+        {
+            Character.sprite = characterDic[name];
+        }
+        else
+        {
+            Character.sprite = null;
+        }
     }
 }

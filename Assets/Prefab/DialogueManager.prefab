@@ -45,9 +45,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DialogeBox: {fileID: 0}
+  NameText: {fileID: 0}
   DialogeText: {fileID: 0}
+  Character: {fileID: 0}
   DialogeAsset: {fileID: 4900000, guid: 680807c2043a1884d9b9ae6a699bb301, type: 3}
   TextLines: []
+  NameLines: []
   currentLine: 0
   isScrolling: 0
   textspeed: 0.05
+  sprites:
+  - {fileID: 21300000, guid: f54413652042e904c9e72c9cf0b6f63c, type: 3}
+  - {fileID: 21300000, guid: 05de766d50d10a747a128c2c3ea573cd, type: 3}
+  - {fileID: 21300000, guid: 1ee6e3598abcce14a82c8828b58f7611, type: 3}
+  - {fileID: 21300000, guid: d66a8eaa5393c344cae6d4de30f58b29, type: 3}
+  - {fileID: 21300000, guid: 1e56ca9cb2315af4bae48b639c5686bc, type: 3}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
